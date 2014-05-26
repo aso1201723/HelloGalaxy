@@ -39,7 +39,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 			//メッセージ表示用のTextViewを探して、文字を設定
 			TextView tv = (TextView)findViewById(R.id.txtMsg);
-			tv.setText("あなたでしたか、" + inputMsg + inputMsg2);
+			tv.setText("あなたでしたか、" + inputMsg + inputMsg2 + "さん");
 		}
 	}
 
