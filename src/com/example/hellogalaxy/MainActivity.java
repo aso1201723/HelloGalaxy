@@ -24,6 +24,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		//ボタン変数にリスナーを登録
 		//MainActivity（this）のクリックイベントを待ち構えるリスナー
 		btnOK.setOnClickListener(this);
+
+		Button btnCancel = (Button)findViewById(R.id.btnCancel);
+		btnCancel.setOnClickListener(this);
 	}
 
 	@Override
@@ -37,9 +40,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			EditText etv2 = (EditText)findViewById(R.id.edtFamily);
 			String inputMsg2 = etv2.getText().toString();
 
+			if( inputMsg.length()!=0 || inputMsg2.length()!=0){
 			//メッセージ表示用のTextViewを探して、文字を設定
 			TextView tv = (TextView)findViewById(R.id.txtMsg);
 			tv.setText("あなたでしたか、" + inputMsg + inputMsg2 + "さん");
+			}
+			break;
+
+		case R.id.btnCancel: //btnCancelが押された
+			etv = (EditText)findViewById(R.id.edtFirst);
+			etv.setText(""); //空白をセット
+			etv2 = (EditText)findViewById(R.id.edtFamily);
+			etv2.setText("");
+			break;
 		}
 	}
 
