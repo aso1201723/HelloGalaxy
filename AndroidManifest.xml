@@ -22,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name="com.example.hellogalaxy.MsgActivity" android:label="@string/app_name">
+        	<intent-filter>
+        		<action android:name="android.inten.action.MAIN"></action>
+        		<category android:name="android.intent.category.LAUNCHER"></category></intent-filter></activity></application>
 
-</manifest>
+
+    </manifest>
